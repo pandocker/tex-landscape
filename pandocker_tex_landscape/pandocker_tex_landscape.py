@@ -15,7 +15,7 @@ class TexLandscape(object):
 
     def action(self, elem, doc):
         if isinstance(elem, pf.Div) and "LANDSCAPE" in elem.classes:
-            if self.doc.format in ["latex"]:
+            if doc.format in ["latex"]:
                 pf.debug("LANDSCAPE")
                 elem.content.insert(0, pf.RawBlock("\\Startlandscape", format="latex"))
                 elem.content.append(pf.RawBlock("\\Stoplandscape", format="latex"))
