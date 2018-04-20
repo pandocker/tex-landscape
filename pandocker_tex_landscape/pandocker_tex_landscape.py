@@ -19,7 +19,7 @@ class TexLandscape(object):
                 pf.debug("LANDSCAPE")
                 elem.content.insert(0, pf.RawBlock("\\Startlandscape", format="latex"))
                 elem.content.append(pf.RawBlock("\\Stoplandscape", format="latex"))
-                pf.debug(elem)
+                # pf.debug(elem)
             ret = elem
             return ret
 
